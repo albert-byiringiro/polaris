@@ -7,9 +7,9 @@
     "node": ">=20.10.0"
   },
   "scripts": {
-    "build": "turbo run build",
-    "build:release": "turbo run build --filter='!polaris.shopify.com'",
-    "dev": "turbo run dev --filter=@shopify/polaris --parallel",
+    "build": "node init && turbo run build",
+    "build:release": "node init && turbo run build --filter='!polaris.shopify.com'",
+    "dev": "node init && turbo run dev --filter=@shopify/polaris --parallel",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "jest --watch",
@@ -39,7 +39,7 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-virtual": "^3.0.1",
-    "@rollup/pluginutils": "^5.1.4",
+    "@rollup/pluginutils": "^5.2.0",
     "@shopify/eslint-plugin": "^42.0.1",
     "@shopify/stylelint-plugin": "^11.0.0",
     "@shopify/typescript-configs": "^5.1.0",

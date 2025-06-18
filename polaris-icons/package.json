@@ -17,9 +17,9 @@
     "node": ">=20.10.0"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "node init && rollup -c",
     "clean": "rm -rf .turbo node_modules dist",
-    "dev": "rollup -c -w",
+    "dev": "node init && rollup -c -w",
     "test": "jest",
     "optimize": "svgo -f icons",
     "lint": "TIMING=1 eslint --cache ."
